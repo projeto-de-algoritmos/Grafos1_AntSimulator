@@ -1,44 +1,29 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# AntSimulator
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 1<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 19/0128712  |  Letícia Assunção Aires Moreira |
+| 20/0024868  |  Mateus Vinícius Ferreira Franco  |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O presente projeto foi desenvolvido durante a disciplina de Projeto de Algoritmos do curso de Engenharia de Software da Universidade de Brasília com o intuito de aplicar conhecimentos adquiridos no módulo Grafos 1.
+
+Nesse sentido, decidimos desenvolver um sistema que simule o comportamento de formigas, tendo em vista sua capacidade de traçar o menor caminho entre comida e o formigueiro, de modo a otimizar o transporte de alimento e, assim, perpetuar a espécie.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
 **Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Framework**: Flutter<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
 Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 
 
 
