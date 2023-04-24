@@ -23,8 +23,9 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 **Linguagem**: Python<br>
 
 ### Pre-Requisitos
-* Python 3
-* Pygame
+* Possuir a versão mais recente do python instalada
+* Instalação do pygame
+
 ### Instruções
 1- Instalar [Python](https://www.python.org/);<br>
 2- Clonar o presente repositório; <br>
