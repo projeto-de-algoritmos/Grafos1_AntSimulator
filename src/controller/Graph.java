@@ -26,6 +26,7 @@ public class Graph {
         Node nodeD = new Node("D");
         Node nodeE = new Node("E");
         Node nodeF = new Node("F");
+        Node nodeG = new Node("G");
 
         nodeA.addDestination(nodeB, 10);
         nodeA.addDestination(nodeC, 15);
@@ -38,7 +39,10 @@ public class Graph {
         nodeD.addDestination(nodeE, 2);
         nodeD.addDestination(nodeF, 1);
 
+        nodeE.addDestination(nodeG, 7);
+
         nodeF.addDestination(nodeE, 5);
+        nodeF.addDestination(nodeG, 13);
 
         Graph graph = new Graph();
 
@@ -48,6 +52,7 @@ public class Graph {
         graph.addNode(nodeD);
         graph.addNode(nodeE);
         graph.addNode(nodeF);
+        graph.addNode(nodeG);
 
         return graph;
     }

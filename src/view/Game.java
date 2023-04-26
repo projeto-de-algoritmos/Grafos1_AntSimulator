@@ -93,6 +93,7 @@ public class Game implements ActionListener {
             for (Node node : nodeDestination.getShortestPath()){
                 System.out.print(node.getName() + "-");
             }
+
             System.out.println(nodeDestination.getName());
             System.out.println();
         }
