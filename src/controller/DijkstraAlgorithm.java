@@ -64,6 +64,7 @@ public class DijkstraAlgorithm {
         Node nodeD = new Node("D");
         Node nodeE = new Node("E");
         Node nodeF = new Node("F");
+        Node nodeG = new Node("G");
 
         nodeA.addDestination(nodeB, 10);
         nodeA.addDestination(nodeC, 15);
@@ -77,6 +78,9 @@ public class DijkstraAlgorithm {
         nodeD.addDestination(nodeF, 1);
 
         nodeF.addDestination(nodeE, 5);
+        nodeF.addDestination(nodeG, 13);
+
+        nodeE.addDestination(nodeG, 7);
 
         Graph graph = new Graph();
 
@@ -86,6 +90,7 @@ public class DijkstraAlgorithm {
         graph.addNode(nodeD);
         graph.addNode(nodeE);
         graph.addNode(nodeF);
+        graph.addNode(nodeG);
 
         graph = calculateShortestPathFromSource(graph, nodeA);
 
