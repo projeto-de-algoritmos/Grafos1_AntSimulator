@@ -28,21 +28,21 @@ public class Graph {
         Node nodeF = new Node("F");
         Node nodeG = new Node("G");
 
-        nodeA.addDestination(nodeB, 10);
-        nodeA.addDestination(nodeC, 15);
+        nodeA.addDestination(nodeB, 1);
+        nodeA.addDestination(nodeC, 1);
 
-        nodeB.addDestination(nodeD, 12);
-        nodeB.addDestination(nodeF, 15);
+        nodeB.addDestination(nodeD, 1);
+        nodeB.addDestination(nodeF, 1);
 
-        nodeC.addDestination(nodeE, 10);
+        nodeC.addDestination(nodeE, 1);
 
-        nodeD.addDestination(nodeE, 2);
+        nodeD.addDestination(nodeE, 1);
         nodeD.addDestination(nodeF, 1);
 
-        nodeE.addDestination(nodeG, 7);
+        nodeE.addDestination(nodeG, 1);
 
-        nodeF.addDestination(nodeE, 5);
-        nodeF.addDestination(nodeG, 13);
+        nodeF.addDestination(nodeE, 1);
+        nodeF.addDestination(nodeG, 1);
 
         Graph graph = new Graph();
 

@@ -2,7 +2,7 @@ package controller;
 
 import java.util.*;
 
-public class DijkstraAlgorithm {
+public class BFSalgorithm {
 
     public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0);
@@ -16,12 +16,9 @@ public class DijkstraAlgorithm {
             Node currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
 
-            for (Map.Entry<Node, Integer> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
-                Node adjacentNode = adjacencyPair.getKey();
-                Integer edgeWeight = adjacencyPair.getValue();
-
+            for (Node adjacentNode : currentNode.getAdjacentNodes().keySet()) {
                 if (!settledNodes.contains(adjacentNode)) {
-                    calculateMinimumDistance(adjacentNode, edgeWeight, currentNode);
+                    calculateMinimumDistance(adjacentNode, currentNode.getDistance() + 1, currentNode);
                     unsettledNodes.add(adjacentNode);
                 }
             }
@@ -45,11 +42,9 @@ public class DijkstraAlgorithm {
         return lowestDistanceNode;
     }
 
-    private static void calculateMinimumDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
-        Integer sourceDistance = sourceNode.getDistance();
-
-        if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
-            evaluationNode.setDistance(sourceDistance + edgeWeigh);
+    private static void calculateMinimumDistance(Node evaluationNode, int distance, Node sourceNode) {
+        if (distance < evaluationNode.getDistance()) {
+            evaluationNode.setDistance(distance);
             LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
             shortestPath.add(sourceNode);
             evaluationNode.setShortestPath(shortestPath);
