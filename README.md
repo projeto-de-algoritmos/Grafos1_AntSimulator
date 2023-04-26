@@ -19,7 +19,15 @@ O presente projeto foi desenvolvido durante a disciplina de Projeto de Algoritmo
 Nesse sentido, decidimos desenvolver um sistema que simule o comportamento de formigas, tendo em vista sua capacidade de traçar o menor caminho entre a comida e sua atual posição, de modo a otimizar o transporte de alimento e, assim, perpetuar a espécie.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+## Menu Inicial
+<img src="https://user-images.githubusercontent.com/72623771/234426200-c69e90e8-0b45-48ac-826b-1f927d0bc4df.png"  min-width="350px" max-width="350px" width="350px">
+
+## Info
+<img src="https://user-images.githubusercontent.com/72623771/234426736-e4e893bf-472a-4e47-a665-1fb00c6975f2.png"  min-width="350px" max-width="350px" width="350px">
+
+## Tela de Jogo
+<img src="https://user-images.githubusercontent.com/72623771/234426263-4a639762-3087-46ec-810b-89ba1dd87f1e.png" min-width="350px" max-width="350px" width="350px">
+
 
 ## Instalação 
 **Linguagem escolhida**: Java<br>
