@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,20 +15,20 @@ public class Info implements ActionListener {
     public Info() {
         JLabel text = new JLabel("Welcome to the Ant Simulator :)");
         JLabel text1 = new JLabel("Steps to play the game:");
-        JLabel text2 = new JLabel("1. Input the ant and food positions (Integer numbers)");
+        JLabel text2 = new JLabel("1. Input the ant and food positions");
         JLabel text3 = new JLabel("2. Click on the find button to generate your best way to food");
-        JLabel text4 = new JLabel("The game will compute the best way to food using graphs !!!");
+        JLabel text4 = new JLabel("The game will compute the best way to food using Dijkstra Algorithm");
         JLabel text5 = new JLabel("Authors: Mateus Franco & Letícia Aires");
 
         infoTitle.setFont(new Font("Arial", Font.BOLD, 15));
-        infoTitle.setBounds(150, 10, 200, 30);
+        infoTitle.setBounds(225, 10, 350, 30);
         backButton.setBounds(10, 10, 70, 25);
-        text.setBounds(10,50, 350,40);
-        text1.setBounds(10,70, 350,40);
-        text2.setBounds(20,100, 350,40);
-        text3.setBounds(20,120, 350,40);
-        text4.setBounds(10,150, 350,40);
-        text5.setBounds(10,170, 350,40);
+        text.setBounds(10,50, 450,40);
+        text1.setBounds(10,70, 450,40);
+        text2.setBounds(20,100, 450,40);
+        text3.setBounds(20,120, 450,40);
+        text4.setBounds(10,150, 500,40);
+        text5.setBounds(10,170, 450,40);
 
         infoFrame.add(infoTitle);
         infoFrame.add(backButton);
@@ -39,7 +41,7 @@ public class Info implements ActionListener {
         infoFrame.setIconImage(icon);
 
         infoFrame.setLayout(null);
-        infoFrame.setSize(400, 250);
+        infoFrame.setSize(550, 250);
         infoFrame.setLocationRelativeTo(null); //display the frame to center position of a screen
         infoFrame.setVisible(true);
 

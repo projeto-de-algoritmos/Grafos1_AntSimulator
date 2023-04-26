@@ -33,7 +33,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 ````
 git clone https://github.com/projeto-de-algoritmos/Grafos1_AntSimulator.git
 ````
-3- Rodar a aplicação, executando a função _main()_ na classe *Menu*<br>
+3- Rodar a aplicação, executando a função _main()_ na classe *view.Menu*<br>
 
 <img src="https://user-images.githubusercontent.com/71900095/234160995-1dd1949d-85fa-46f2-8819-dfad9c140d15.png">
 
