@@ -1,39 +1,43 @@
 package view;
 
-import controller.Graph;
-import controller.Node;
+import controller.BFSController;
+import controller.DFSController;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Locale;
-
-import static controller.BFSalgorithm.calculateShortestPathFromSource;
-import static controller.Graph.generateGraph;
 
 public class Game implements ActionListener {
 
-    private static final JFrame gameFrame = new JFrame("Welcome to the game!");
+    public static final JFrame gameFrame = new JFrame("Welcome to the game!");
     private static final JButton backButton = new JButton("back");
-    private static final JButton findButton = new JButton("find food");
+    private static final JButton findFoodButton = new JButton("find food");
     private static final JLabel antPosition = new JLabel("ant position: ");
     private static final JLabel foodPosition = new JLabel("food position: ");
-    private static final JTextField inputAntPosition = new JTextField(2);
-    private static final JTextField inputFoodPosition = new JTextField(2);
+    private static final JLabel algorithm = new JLabel("choose the algorithm: ");
+    public static final JTextField inputAntPosition = new JTextField(2);
+    public static final JTextField inputFoodPosition = new JTextField(2);
     private static final Image icon = Toolkit.getDefaultToolkit().getImage("ant.png");
-    private static String way = "";
-    JLabel path = new JLabel(way);
+    private static final JRadioButton bfs = new JRadioButton("BFS");
+    private static final JRadioButton dfs = new JRadioButton("DFS");
+
+    private static final String way = "";
+    private static final JLabel path = new JLabel(way);
 
     public Game() {
         JLabel answer = new JLabel("best way to food:");
 
-        Container c = gameFrame.getContentPane(); //Gets the content layer
+        ButtonGroup group = new ButtonGroup();
+        group.add(bfs);
+        group.add(dfs);
 
-        JLabel label = new JLabel(); //JLabel Creation
-        label.setIcon(new ImageIcon("graph.png")); //Sets the image to be displayed as an icon
-        Dimension size = label.getPreferredSize(); //Gets the size of the image
-        label.setBounds(170, 10, size.width, size.height); //Sets the location of the image
+        Container c = gameFrame.getContentPane();
+
+        JLabel label = new JLabel();
+        label.setIcon(new ImageIcon("graph.png"));
+        Dimension size = label.getPreferredSize();
+        label.setBounds(170, 10, size.width, size.height);
 
         c.add(label);
         backButton.setBounds(10, 10, 70, 25);
@@ -41,19 +45,23 @@ public class Game implements ActionListener {
         foodPosition.setBounds(10, 75, 110, 20);
         inputAntPosition.setBounds(120, 50, 30, 20);
         inputFoodPosition.setBounds(120, 75, 30, 20);
-        findButton.setBounds(10, 110, 110, 25);
-        answer.setBounds(10, 170, 130, 30);
+        algorithm.setBounds(10, 110, 150, 20);
+        bfs.setBounds(10, 140, 70, 20);
+        dfs.setBounds(10, 165, 70, 20);
+        findFoodButton.setBounds(10, 200, 110, 25);
+        answer.setBounds(10, 230, 150, 30);
+        path.setBounds(10, 250, 200, 50);
 
         gameFrame.add(backButton);
         gameFrame.add(antPosition);
         gameFrame.add(foodPosition);
         gameFrame.add(inputAntPosition);
         gameFrame.add(inputFoodPosition);
-        gameFrame.add(findButton);
+        gameFrame.add(algorithm);
+        gameFrame.add(bfs);
+        gameFrame.add(dfs);
+        gameFrame.add(findFoodButton);
         gameFrame.add(answer);
-
-
-        path.setBounds(35, 190, 200, 50);
         gameFrame.add(path);
 
         gameFrame.setIconImage(icon);
@@ -62,7 +70,7 @@ public class Game implements ActionListener {
         gameFrame.setLocationRelativeTo(null); //display the frame to center position of a screen
         gameFrame.setVisible(true);
 
-        findButton.addActionListener(this);
+        findFoodButton.addActionListener(this);
         backButton.addActionListener(this);
     }
 
@@ -73,37 +81,20 @@ public class Game implements ActionListener {
         if (src == backButton) {
             new Menu();
             gameFrame.dispose();
-        } else if (src == findButton) {
-            Graph graph = generateGraph();
+        } else if (src == findFoodButton) {
+            path.setText("");
 
             String source = inputAntPosition.getText().toUpperCase();
-            Node nodeSource = null;
-
-            for (Node node : graph.getNodes()) {
-                if (node.getName().equals(source)) {
-                    nodeSource = node;
-                }
-            }
-
-            graph = calculateShortestPathFromSource(graph, nodeSource);
-
             String destination = inputFoodPosition.getText().toUpperCase();
-            Node nodeDestination = null;
 
-            for (Node node : graph.getNodes()) {
-                if (node.getName().equals(destination)) {
-                    nodeDestination = node;
-                }
+            if (bfs.isSelected()) {
+                new BFSController(way, path, source, destination);
+            } else if (dfs.isSelected()) {
+                //new DFSController(way, path, source, destination);
+            } else {
+                new JOptionPane();
+                JOptionPane.showMessageDialog(null, "please, choose the algorithm");
             }
-
-            ;
-
-            for (Node node : nodeDestination.getShortestPath()) {
-                String s = node.getName() + " - ";
-                way = way + s;
-            }
-            way = way + nodeDestination.getName();
-            path.setText(way);
 
         }
     }

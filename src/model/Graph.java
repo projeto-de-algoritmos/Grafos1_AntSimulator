@@ -1,4 +1,4 @@
-package controller;
+package model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -155,11 +155,13 @@ public class Graph {
         graph.addNode(nodeF);
         graph.addNode(nodeG);
         graph.addNode(nodeH);
+        graph.addNode(nodeI);
         graph.addNode(nodeJ);
         graph.addNode(nodeK);
         graph.addNode(nodeL);
         graph.addNode(nodeM);
         graph.addNode(nodeN);
+        graph.addNode(nodeO);
         graph.addNode(nodeP);
         graph.addNode(nodeQ);
         graph.addNode(nodeR);
