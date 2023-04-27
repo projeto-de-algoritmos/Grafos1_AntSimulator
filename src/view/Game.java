@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 
-import static controller.DijkstraAlgorithm.calculateShortestPathFromSource;
+import static controller.BFSalgorithm.calculateShortestPathFromSource;
 import static controller.Graph.generateGraph;
 
 public class Game implements ActionListener {
@@ -58,7 +58,7 @@ public class Game implements ActionListener {
 
         gameFrame.setIconImage(icon);
         gameFrame.setLayout(null);
-        gameFrame.setSize(630, 310);
+        gameFrame.setSize(900, 500);
         gameFrame.setLocationRelativeTo(null); //display the frame to center position of a screen
         gameFrame.setVisible(true);
 
