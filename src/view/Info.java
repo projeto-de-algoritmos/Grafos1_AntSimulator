@@ -17,7 +17,7 @@ public class Info implements ActionListener {
         JLabel text1 = new JLabel("Steps to play the game:");
         JLabel text2 = new JLabel("1. Input the ant and food positions");
         JLabel text3 = new JLabel("2. Click on the find button to generate your best way to food");
-        JLabel text4 = new JLabel("The game will compute the best way to food using Dijkstra Algorithm");
+        JLabel text4 = new JLabel("The game will compute the best way to food using BFS Algorithm");
         JLabel text5 = new JLabel("Authors: Mateus Franco & Letícia Aires");
 
         infoTitle.setFont(new Font("Arial", Font.BOLD, 15));

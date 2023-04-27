@@ -58,7 +58,7 @@ public class Game implements ActionListener {
 
         gameFrame.setIconImage(icon);
         gameFrame.setLayout(null);
-        gameFrame.setSize(630, 310);
+        gameFrame.setSize(900, 500);
         gameFrame.setLocationRelativeTo(null); //display the frame to center position of a screen
         gameFrame.setVisible(true);
 
