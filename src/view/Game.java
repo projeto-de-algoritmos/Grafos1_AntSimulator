@@ -1,7 +1,6 @@
 package view;
 
 import controller.BFSController;
-import controller.DFSController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,22 +14,15 @@ public class Game implements ActionListener {
     private static final JButton findFoodButton = new JButton("find food");
     private static final JLabel antPosition = new JLabel("ant position: ");
     private static final JLabel foodPosition = new JLabel("food position: ");
-    private static final JLabel algorithm = new JLabel("choose the algorithm: ");
     public static final JTextField inputAntPosition = new JTextField(2);
     public static final JTextField inputFoodPosition = new JTextField(2);
     private static final Image icon = Toolkit.getDefaultToolkit().getImage("ant.png");
-    private static final JRadioButton bfs = new JRadioButton("BFS");
-    private static final JRadioButton dfs = new JRadioButton("DFS");
 
     private static final String way = "";
     private static final JLabel path = new JLabel(way);
 
     public Game() {
         JLabel answer = new JLabel("best way to food:");
-
-        ButtonGroup group = new ButtonGroup();
-        group.add(bfs);
-        group.add(dfs);
 
         Container c = gameFrame.getContentPane();
 
@@ -45,10 +37,7 @@ public class Game implements ActionListener {
         foodPosition.setBounds(10, 75, 110, 20);
         inputAntPosition.setBounds(120, 50, 30, 20);
         inputFoodPosition.setBounds(120, 75, 30, 20);
-        algorithm.setBounds(10, 110, 150, 20);
-        bfs.setBounds(10, 140, 70, 20);
-        dfs.setBounds(10, 165, 70, 20);
-        findFoodButton.setBounds(10, 200, 110, 25);
+        findFoodButton.setBounds(10, 110, 110, 25);
         answer.setBounds(10, 230, 150, 30);
         path.setBounds(10, 250, 200, 50);
 
@@ -57,9 +46,6 @@ public class Game implements ActionListener {
         gameFrame.add(foodPosition);
         gameFrame.add(inputAntPosition);
         gameFrame.add(inputFoodPosition);
-        gameFrame.add(algorithm);
-        gameFrame.add(bfs);
-        gameFrame.add(dfs);
         gameFrame.add(findFoodButton);
         gameFrame.add(answer);
         gameFrame.add(path);
@@ -87,14 +73,7 @@ public class Game implements ActionListener {
             String source = inputAntPosition.getText().toUpperCase();
             String destination = inputFoodPosition.getText().toUpperCase();
 
-            if (bfs.isSelected()) {
-                new BFSController(way, path, source, destination);
-            } else if (dfs.isSelected()) {
-                //new DFSController(way, path, source, destination);
-            } else {
-                new JOptionPane();
-                JOptionPane.showMessageDialog(null, "please, choose the algorithm");
-            }
+            new BFSController(way, path, source, destination);
 
         }
     }
