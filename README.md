@@ -26,7 +26,7 @@ Nesse sentido, decidimos desenvolver um sistema que simule o comportamento de fo
 <img src="https://user-images.githubusercontent.com/72623771/234426736-e4e893bf-472a-4e47-a665-1fb00c6975f2.png"  min-width="350px" max-width="350px" width="350px">
 
 ## Tela de Jogo
-<img src="https://user-images.githubusercontent.com/72623771/234426263-4a639762-3087-46ec-810b-89ba1dd87f1e.png" min-width="350px" max-width="350px" width="350px">
+<img src="https://user-images.githubusercontent.com/72623771/235558090-ff07013e-c46c-40f8-91ec-0a80bb73de3b.png" min-width="350px" max-width="350px" width="350px">
 
 
 ## Instalação 
@@ -48,9 +48,8 @@ git clone https://github.com/projeto-de-algoritmos/Grafos1_AntSimulator.git
 <img src="https://user-images.githubusercontent.com/71900095/234160995-1dd1949d-85fa-46f2-8819-dfad9c140d15.png">
 
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
+## Vídeo 
+[Grafos 1](https://youtu.be/FWa6aVN7IWs)
 
 
 
